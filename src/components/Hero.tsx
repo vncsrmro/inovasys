@@ -18,14 +18,14 @@ const Hero = () => {
         <div className="absolute w-96 h-96 bg-accent/10 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="container relative z-10 px-6 py-32">
+      <div className="container relative z-10 px-4 sm:px-6 py-32">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.1] tracking-tight mb-6">
               Não Desenvolvemos Sites.
               <br />
               <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
@@ -38,7 +38,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed font-light"
           >
             A INOVASYS é a parceira que transforma suas ideias e processos manuais em{" "}
             <strong className="font-semibold text-accent">Sistemas Web</strong> e{" "}
@@ -55,10 +55,11 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={handleWhatsAppClick}
-              className="bg-accent hover:bg-accent/90 text-primary font-bold text-lg px-8 py-7 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
+              className="bg-accent hover:bg-accent/90 text-primary font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-6 sm:py-7 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
             >
               <MessageCircle className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Quero um Projeto Fora da Curva
+              <span className="hidden sm:inline">Quero um Projeto Fora da Curva</span>
+              <span className="sm:hidden">Inicie Seu Projeto</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>

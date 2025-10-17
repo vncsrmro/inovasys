@@ -22,14 +22,14 @@ const clients = [
 const ClientsCarousel = () => {
   return (
     <section id="clientes" className="py-24 bg-secondary/30 overflow-hidden">
-      <div className="container px-6">
+      <div className="container px-4 sm:px-6">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
             Construindo Resultados.
             <br />
             <span className="text-accent">A Confiança de Quem Aposta Alto.</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Veja algumas das empresas que confiaram na INOVASYS para digitalizar sua operação
             ou impulsionar suas vendas online.
           </p>
@@ -60,7 +60,7 @@ const ClientsCarousel = () => {
             href="https://wa.me/5519960003434?text=Olá! Quero saber mais sobre como a INOVASYS pode ajudar minha empresa."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-accent hover:text-accent/80 font-semibold transition-colors"
+            className="flex flex-wrap items-center justify-center gap-x-2 text-center text-sm sm:text-base text-accent hover:text-accent/80 font-semibold transition-colors"
           >
             Tire Suas Dúvidas e Peça um Orçamento Sem Compromisso
             <svg

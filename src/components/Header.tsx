@@ -30,7 +30,7 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container px-6">
+      <div className="container px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <img
@@ -66,10 +66,11 @@ const Header = () => {
 
           <Button
             onClick={handleWhatsAppClick}
-            className="bg-accent hover:bg-accent/90 text-primary font-semibold"
+            className="bg-accent hover:bg-accent/90 text-primary font-semibold px-3 sm:px-4"
+            size="sm"
           >
-            <MessageCircle className="mr-2 h-4 w-4" />
-            Falar no WhatsApp
+            <MessageCircle className="h-4 w-4 sm:mr-2" />
+            <span className="hidden sm:inline">Falar no WhatsApp</span>
           </Button>
         </div>
       </div>

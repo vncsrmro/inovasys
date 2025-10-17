@@ -34,12 +34,12 @@ const steps = [
 const Methodology = () => {
   return (
     <section id="metodologia" className="py-24 bg-background">
-      <div className="container px-6">
+      <div className="container px-4 sm:px-6">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-6xl font-black text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
             Tecnologia de Última Geração.
             <br />
-            <span className="text-accent">Sua Ideia, Nossa Execução Impecável.</span>
+            <span className="text-accent block sm:inline">Sua Ideia, Nossa Execução Impecável.</span>
           </h2>
         </div>
 
@@ -54,7 +54,7 @@ const Methodology = () => {
                 <div className="hidden lg:block absolute top-16 left-[calc(50%+2rem)] w-full h-0.5 bg-gradient-to-r from-accent/50 to-accent/20" />
               )}
 
-              <div className="relative bg-card border border-border rounded-2xl p-6 hover:border-accent/50 transition-all duration-300 hover:shadow-lg h-full">
+              <div className="relative bg-card border border-border rounded-2xl p-4 sm:p-6 hover:border-accent/50 transition-all duration-300 hover:shadow-lg h-full">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
                     <step.icon className="w-6 h-6 text-accent" />
@@ -64,7 +64,7 @@ const Methodology = () => {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">
                   {step.title}
                 </h3>
 
