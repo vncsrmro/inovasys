@@ -34,8 +34,8 @@ const steps = [
 
 const Methodology = () => {
   return (
-    <section id="metodologia" className="py-24 bg-background">
-      <div className="container px-4 sm:px-6">
+    <section id="metodologia" className="py-24 bg-muted/30 relative">
+      <div className="container px-4 sm:px-6 relative">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
             Tecnologia de Última Geração.
@@ -44,8 +44,20 @@ const Methodology = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
+        <div className="max-w-6xl mx-auto relative">
+          {/* Vertical timeline for mobile */}
+          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent/20 via-accent/40 to-accent/20 rounded-full lg:hidden">
+            <motion.div
+              className="absolute top-0 left-0 w-full bg-accent rounded-full shadow-[0_0_10px_rgba(64,229,145,0.6)]"
+              initial={{ height: "0%" }}
+              whileInView={{ height: "100%" }}
+              viewport={{ once: true }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -30 }}
@@ -78,7 +90,8 @@ const Methodology = () => {
                 </p>
               </div>
             </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

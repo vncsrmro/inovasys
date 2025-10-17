@@ -3,8 +3,11 @@ import { MessageCircle, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16">
-      <div className="container px-4 sm:px-6">
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-primary-foreground py-16 relative overflow-hidden">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
+      
+      <div className="container px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <img

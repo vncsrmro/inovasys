@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import ClientsCarousel from "@/components/ClientsCarousel";
+import SocialProof from "@/components/SocialProof";
 import Methodology from "@/components/Methodology";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ const Index = () => {
         <Hero />
         <Services />
         <ClientsCarousel />
+        <SocialProof />
         <Methodology />
         <FinalCTA />
       </main>

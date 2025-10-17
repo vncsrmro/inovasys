@@ -11,11 +11,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/90">
-      {/* Animated background elements */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Subtle grid pattern background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-accent/10 rounded-full blur-3xl -top-48 -left-48 animate-float" />
-        <div className="absolute w-96 h-96 bg-accent/10 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+        <div className="absolute w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl -top-48 -left-48 animate-float" />
+        <div className="absolute w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="container relative z-10 px-4 sm:px-6 py-32">
@@ -25,7 +27,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-foreground leading-[1.1] tracking-tight mb-6">
               Não Desenvolvemos Sites.
               <br />
               <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
@@ -38,7 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed font-light"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light"
           >
             A INOVASYS é a parceira que transforma suas ideias e processos manuais em{" "}
             <strong className="font-semibold text-accent">Sistemas Web</strong> e{" "}
@@ -68,7 +70,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="pt-12 text-primary-foreground/70 text-sm"
+            className="pt-12 text-muted-foreground text-sm"
           >
             Resposta em até 1 hora útil
           </motion.div>
@@ -82,7 +84,7 @@ const Hero = () => {
         transition={{ duration: 1, delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full p-1">
+        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full p-1">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
