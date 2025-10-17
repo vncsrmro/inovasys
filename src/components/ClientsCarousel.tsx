@@ -21,7 +21,7 @@ const clients = [
 
 const ClientsCarousel = () => {
   return (
-    <section className="py-24 bg-secondary/30 overflow-hidden">
+    <section id="clientes" className="py-24 bg-secondary/30 overflow-hidden">
       <div className="container px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-black text-foreground tracking-tight">

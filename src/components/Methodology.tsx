@@ -33,7 +33,7 @@ const steps = [
 
 const Methodology = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="metodologia" className="py-24 bg-background">
       <div className="container px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-black text-foreground tracking-tight">

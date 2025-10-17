@@ -36,7 +36,8 @@ const Header = () => {
             <img
               src={logoInovasys}
               alt="INOVASYS"
-              className="h-10 w-auto"
+              className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             />
           </div>
 
