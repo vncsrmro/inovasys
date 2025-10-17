@@ -46,12 +46,8 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden" id="servicos">
-      {/* Decorative pattern */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/5 to-transparent" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-      
-      <div className="container px-4 sm:px-6 relative z-10">
+    <section className="py-24 bg-background" id="servicos">
+      <div className="container px-4 sm:px-6">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Sparkles className="w-4 h-4" />

@@ -4,9 +4,6 @@ import { MessageCircle, Mail, Instagram } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-primary-foreground py-16 relative overflow-hidden">
-      {/* Separator line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
-      
       {/* Subtle texture */}
       <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
       
