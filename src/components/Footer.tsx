@@ -43,9 +43,14 @@ const Footer = () => {
                   (19) 96000-3434
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Mail className="w-4 h-4" />
-                contato@inovasys.com.br
+              <li>
+                <a
+                  href="mailto:contato@inovasys.digital"
+                  className="flex items-center gap-2 text-primary-foreground/70 hover:text-accent transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  contato@inovasys.digital
+                </a>
               </li>
             </ul>
           </div>
