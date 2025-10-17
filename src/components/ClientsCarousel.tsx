@@ -36,19 +36,21 @@ const ClientsCarousel = () => {
         </div>
 
         {/* Infinite scroll carousel */}
-        <div className="relative">
-          <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
-            <div className="flex animate-scroll">
-              {[...clients, ...clients].map((client, index) => (
+        <div className="relative py-8">
+          <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+            <div className="flex gap-12 sm:gap-16 md:gap-20 animate-scroll hover:[animation-play-state:paused]">
+              {[...clients, ...clients, ...clients].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 mx-8 grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+                  className="flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-500 group"
                 >
-                  <img
-                    src={client.logo}
-                    alt={`Logo ${client.name}`}
-                    className="h-16 w-auto object-contain"
-                  />
+                  <div className="w-28 h-14 sm:w-32 sm:h-16 md:w-40 md:h-20 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border group-hover:border-accent/50 group-hover:shadow-lg transition-all duration-300">
+                    <img
+                      src={client.logo}
+                      alt={`Logo ${client.name}`}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </div>
               ))}
             </div>

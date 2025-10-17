@@ -1,4 +1,5 @@
 import { Lightbulb, Code, Database, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -45,26 +46,30 @@ const Methodology = () => {
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               className="relative group"
             >
-              {/* Connector line */}
+              {/* Connector line with animation */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 left-[calc(50%+2rem)] w-full h-0.5 bg-gradient-to-r from-accent/50 to-accent/20" />
+                <div className="hidden lg:block absolute top-16 left-[calc(50%+2rem)] w-full h-1 bg-gradient-to-r from-accent/60 via-accent/30 to-accent/10 rounded-full animate-pulse" />
               )}
 
-              <div className="relative bg-card border border-border rounded-2xl p-4 sm:p-6 hover:border-accent/50 transition-all duration-300 hover:shadow-lg h-full">
+              <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-4 sm:p-6 hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 h-full">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                    <step.icon className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-all duration-500 group-hover:rotate-[360deg]">
+                    <step.icon className="w-6 h-6 text-accent group-hover:drop-shadow-[0_0_8px_rgba(64,229,145,0.6)]" />
                   </div>
-                  <span className="text-5xl font-black text-accent/20 leading-none">
+                  <span className="text-5xl font-black bg-gradient-to-br from-accent to-accent/50 bg-clip-text text-transparent leading-none">
                     {step.number}
                   </span>
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
                   {step.title}
                 </h3>
 
@@ -72,7 +77,7 @@ const Methodology = () => {
                   {step.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

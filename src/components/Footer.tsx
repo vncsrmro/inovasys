@@ -73,7 +73,15 @@ const Footer = () => {
               © {new Date().getFullYear()} INOVASYS. Todos os direitos reservados.
             </p>
             <p className="text-sm text-primary-foreground/60">
-              A criadora do RAT Móvel
+              A criadora do{" "}
+              <a
+                href="https://ratmovel.inovasys.digital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent/80 font-semibold transition-colors underline decoration-accent/30 hover:decoration-accent"
+              >
+                RAT Móvel
+              </a>
             </p>
           </div>
         </div>
