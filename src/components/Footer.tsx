@@ -1,5 +1,5 @@
 import logoInovasys from "@/assets/logo-inovasys.png";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -50,6 +50,17 @@ const Footer = () => {
                 >
                   <Mail className="w-4 h-4" />
                   contato@inovasys.digital
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/inovasys.digital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary-foreground/70 hover:text-accent transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  @inovasys.digital
                 </a>
               </li>
             </ul>
