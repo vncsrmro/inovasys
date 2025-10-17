@@ -11,13 +11,14 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10">
+      {/* Large pulsating blue orb */}
+      <div className="absolute w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+      
       {/* Subtle grid pattern background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
-        <div className="absolute w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl -top-48 -left-48 animate-float" />
-        <div className="absolute w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -bottom-48 -right-48 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background/80" />
       </div>
 
       <div className="container relative z-10 px-4 sm:px-6 py-32">

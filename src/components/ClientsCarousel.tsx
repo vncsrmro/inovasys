@@ -21,15 +21,20 @@ const clients = [
 
 const ClientsCarousel = () => {
   return (
-    <section id="clientes" className="py-24 bg-secondary/30 overflow-hidden">
-      <div className="container px-4 sm:px-6">
+    <section id="clientes" className="py-24 bg-gradient-to-br from-primary/95 via-primary to-primary/90 text-primary-foreground relative overflow-hidden">
+      {/* Tech pattern background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
+      </div>
+      
+      <div className="container px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
             Construindo Resultados.
             <br />
             <span className="text-accent">A Confiança de Quem Aposta Alto.</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Veja algumas das empresas que confiaram na INOVASYS para digitalizar sua operação
             ou impulsionar suas vendas online.
           </p>
@@ -44,7 +49,7 @@ const ClientsCarousel = () => {
                   key={index}
                   className="flex-shrink-0 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-500 group"
                 >
-                  <div className="w-28 h-14 sm:w-32 sm:h-16 md:w-40 md:h-20 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border group-hover:border-accent/50 group-hover:shadow-lg transition-all duration-300">
+                  <div className="w-28 h-14 sm:w-32 sm:h-16 md:w-40 md:h-20 flex items-center justify-center p-3 sm:p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 group-hover:border-accent/80 group-hover:shadow-lg transition-all duration-300">
                     <img
                       src={client.logo}
                       alt={`Logo ${client.name}`}
@@ -62,7 +67,7 @@ const ClientsCarousel = () => {
             href="https://wa.me/5519960003434?text=Olá! Quero saber mais sobre como a INOVASYS pode ajudar minha empresa."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-wrap items-center justify-center gap-x-2 text-center text-sm sm:text-base text-accent hover:text-accent/80 font-semibold transition-colors"
+            className="flex flex-wrap items-center justify-center gap-x-2 text-center text-sm sm:text-base text-white hover:text-accent font-semibold transition-colors"
           >
             Tire Suas Dúvidas e Peça um Orçamento Sem Compromisso
             <svg
