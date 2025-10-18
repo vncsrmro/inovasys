@@ -37,7 +37,7 @@ const Header = () => {
               src={logoInovasys}
               alt="INOVASYS"
               className={`h-10 w-auto cursor-pointer hover:opacity-80 transition-all duration-300 ${
-                !scrolled ? : ""
+                !scrolled ? "brightness-0 invert" : ""
               }`}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             />
