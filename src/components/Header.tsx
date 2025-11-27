@@ -26,7 +26,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-lg shadow-md"
+          ? "bg-primary shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -36,9 +36,7 @@ const Header = () => {
             <img
               src={logoInovasys}
               alt="INOVASYS"
-              className={`h-10 w-auto cursor-pointer hover:opacity-80 transition-all duration-300 ${
-                !scrolled ? "brightness-0 invert" : ""
-              }`}
+              className="h-10 w-auto cursor-pointer hover:opacity-80 transition-all duration-300 brightness-0 invert"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             />
           </div>
@@ -46,19 +44,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="#servicos"
-              className="text-sm font-medium hover:text-accent transition-colors"
+              className="text-sm font-medium text-white/90 hover:text-accent transition-colors"
             >
               Serviços
             </a>
             <a
+              href="#portfolio"
+              className="text-sm font-medium text-white/90 hover:text-accent transition-colors"
+            >
+              Cases
+            </a>
+            <a
               href="#clientes"
-              className="text-sm font-medium hover:text-accent transition-colors"
+              className="text-sm font-medium text-white/90 hover:text-accent transition-colors"
             >
               Clientes
             </a>
             <a
               href="#metodologia"
-              className="text-sm font-medium hover:text-accent transition-colors"
+              className="text-sm font-medium text-white/90 hover:text-accent transition-colors"
             >
               Metodologia
             </a>
