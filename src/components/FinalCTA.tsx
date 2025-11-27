@@ -10,14 +10,18 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="py-32 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
-      {/* Subtle radial gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(64,229,145,0.08)_0%,transparent_65%)] opacity-40" />
+    <section className="py-32 bg-gradient-to-br from-primary via-primary to-accent/20 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:64px_64px]" />
+      </div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl" />
       
       <div className="container px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Elevated card with glassmorphism */}
-          <div className="bg-card/80 backdrop-blur-xl border-2 border-accent/20 rounded-3xl p-8 sm:p-12 md:p-16 shadow-[0_0_80px_rgba(64,229,145,0.15)] hover:shadow-[0_0_100px_rgba(64,229,145,0.25)] transition-all duration-500">
+          <div className="bg-white border-2 border-accent/30 rounded-3xl p-8 sm:p-12 md:p-16 shadow-[0_0_120px_rgba(64,229,145,0.3)] hover:shadow-[0_0_150px_rgba(64,229,145,0.4)] transition-all duration-500">
             <div className="text-center space-y-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight tracking-tight">
                 Se o seu projeto é complexo,

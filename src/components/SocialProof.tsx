@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const SocialProof = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
       <div className="container px-4 sm:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Imagem do time/workspace */}
