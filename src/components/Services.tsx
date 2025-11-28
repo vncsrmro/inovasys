@@ -1,74 +1,62 @@
+import { useTranslation } from "react-i18next";
 import { Sparkles, Code2, Globe, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { motion } from "framer-motion";
-
-const services = [
-  {
-    icon: TrendingUp,
-    title: "Landing Pages de Alta Conversão",
-    description: (
-      <>
-        Páginas singulares, otimizadas para gerar leads ou vendas imediatas. Foco em UX/UI impecável e velocidade ultra-rápida.
-      </>
-    ),
-    metric: "Até 300% mais conversão",
-  },
-  {
-    icon: Code2,
-    title: "Sistemas Web Personalizados (SaaS)",
-    description: (
-      <>
-        Transformamos processos internos complexos (como o{" "}
-        <a
-          href="https://ratmovel.inovasys.digital"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent hover:text-accent/80 font-semibold transition-colors underline decoration-accent/30 hover:decoration-accent"
-        >
-          RAT Móvel
-        </a>
-        ) em plataformas web seguras, escaláveis e sob medida para sua regra de negócio.
-      </>
-    ),
-    metric: "ROI em 6 meses",
-  },
-  {
-    icon: Globe,
-    title: "Sites Institucionais e Portfólios",
-    description: (
-      <>
-        Presença digital robusta que reflete a autoridade da sua marca, com design moderno e arquitetura focada em SEO.
-      </>
-    ),
-    metric: "Autoridade digital",
-  },
-];
 
 const Services = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: TrendingUp,
+      titleKey: "services.landing.title",
+      descriptionKey: "services.landing.description",
+      metricKey: "services.landing.metric",
+      link: null,
+    },
+    {
+      icon: Code2,
+      titleKey: "services.saas.title",
+      descriptionKey: "services.saas.description",
+      metricKey: "services.saas.metric",
+      link: {
+        url: "https://ratmovel.inovasys.digital",
+        text: "RAT Móvel",
+      },
+    },
+    {
+      icon: Globe,
+      titleKey: "services.institutional.title",
+      descriptionKey: "services.institutional.description",
+      metricKey: "services.institutional.metric",
+      link: null,
+    },
+  ];
+
   return (
-    <section className="py-24 bg-gradient-to-b from-muted/50 via-background to-background relative overflow-hidden" id="servicos">
+    <section
+      className="py-24 bg-gradient-to-b from-muted/50 via-background to-background relative overflow-hidden"
+      id="servicos"
+    >
       <div className="container px-4 sm:px-6">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Sparkles className="w-4 h-4" />
-            Nossos Focos de Atuação
+            {t("services.badge")}
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground tracking-tight">
-            Digitalização Estratégica
+            {t("services.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Soluções sob medida para transformar seu negócio
+            {t("services.subtitle")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Card className="group h-full p-6 sm:p-8 bg-card/50 backdrop-blur-sm border-border hover:border-accent/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(64,229,145,0.15)] hover:-translate-y-3 hover:scale-[1.02] cursor-pointer">
                 <div className="mb-6">
@@ -78,20 +66,35 @@ const Services = () => {
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
 
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  {service.description}
+                  {service.link ? (
+                    <>
+                      {t(service.descriptionKey).split("RAT Móvel")[0]}
+                      <a
+                        href={service.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent hover:text-accent/80 font-semibold transition-colors underline decoration-accent/30 hover:decoration-accent"
+                      >
+                        {service.link.text}
+                      </a>
+                      {t(service.descriptionKey).split("RAT Móvel")[1] || ""}
+                    </>
+                  ) : (
+                    t(service.descriptionKey)
+                  )}
                 </p>
 
                 <div className="pt-4 border-t border-border">
                   <span className="text-sm font-semibold text-accent">
-                    {service.metric}
+                    {t(service.metricKey)}
                   </span>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

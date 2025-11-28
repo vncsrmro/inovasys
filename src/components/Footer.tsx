@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import logoInovasys from "@/assets/logo-inovasys.png";
 import { MessageCircle, Mail, Instagram } from "lucide-react";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-primary-foreground py-16 relative overflow-hidden">
       {/* Subtle texture */}
       <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]" />
-      
+
       <div className="container px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -16,24 +19,24 @@ const Footer = () => {
               className="h-10 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Desenvolvimento Web & Sistemas Customizados
+              {t("footer.tagline")}
               <br />
-              Transformando processos em ativos digitais
+              {t("footer.tagline2")}
             </p>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Serviços</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.servicesTitle")}</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>Landing Pages de Alta Conversão</li>
-              <li>Sistemas Web (SaaS)</li>
-              <li>Sites Institucionais</li>
-              <li>Consultoria Digital</li>
+              <li>{t("footer.service1")}</li>
+              <li>{t("footer.service2")}</li>
+              <li>{t("footer.service3")}</li>
+              <li>{t("footer.service4")}</li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-4">Contato</h3>
+            <h3 className="font-bold text-lg mb-4">{t("footer.contactTitle")}</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
@@ -73,10 +76,10 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © {new Date().getFullYear()} INOVASYS. Todos os direitos reservados.
+              © {new Date().getFullYear()} {t("footer.copyright")}
             </p>
             <p className="text-sm text-primary-foreground/60">
-              A criadora do{" "}
+              {t("footer.creatorOf")}{" "}
               <a
                 href="https://ratmovel.inovasys.digital"
                 target="_blank"

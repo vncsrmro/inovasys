@@ -115,6 +115,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-5px)" },
         },
+        "grid": {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -129,6 +133,7 @@ export default {
         "glow": "glow 2s ease-in-out infinite",
         "shimmer": "shimmer 3s linear infinite",
         "bounce-subtle": "bounce-subtle 2s ease-in-out infinite",
+        "grid": "grid 20s linear infinite",
       },
     },
   },
