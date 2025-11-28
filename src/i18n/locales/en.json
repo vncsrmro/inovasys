@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "services": "Services",
+    "cases": "Cases",
+    "clients": "Clients",
+    "methodology": "Methodology",
+    "contact": "Contact",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "hero": {
+    "title1": "We Don't Build Websites.",
+    "title2": "We Create Sales & Automation Machines.",
+    "description": "INOVASYS is the partner that transforms your ideas and manual processes into",
+    "systems": "Web Systems",
+    "and": "and",
+    "landingPages": "High-Converting Landing Pages",
+    "descEnd": ", with cutting-edge design and technology.",
+    "cta": "I Want a Standout Project",
+    "ctaMobile": "Start Your Project",
+    "response": "Response within 1 business hour"
+  },
+  "services": {
+    "badge": "Our Focus Areas",
+    "title": "Strategic Digitalization",
+    "subtitle": "Custom solutions to transform your business",
+    "landing": {
+      "title": "High-Converting Landing Pages",
+      "description": "Unique pages optimized to generate leads or immediate sales. Focus on flawless UX/UI and ultra-fast speed.",
+      "metric": "Up to 300% more conversion"
+    },
+    "saas": {
+      "title": "Custom Web Systems (SaaS)",
+      "description": "We transform complex internal processes into secure, scalable web platforms tailored to your business rules.",
+      "metric": "ROI in 6 months"
+    },
+    "institutional": {
+      "title": "Institutional Sites & Portfolios",
+      "description": "Robust digital presence that reflects your brand's authority, with modern design and SEO-focused architecture.",
+      "metric": "Digital authority"
+    }
+  },
+  "portfolio": {
+    "badge": "Recent Projects",
+    "title": "Success",
+    "titleAccent": "Cases",
+    "subtitle": "Discover some of the projects that transformed businesses",
+    "viewDetails": "View details",
+    "visitSite": "Visit Website",
+    "similarProject": "I Want a Similar Project",
+    "features": "Delivered Features",
+    "technologies": "Technologies Used",
+    "cuqui": {
+      "category": "Complete System + AI",
+      "short": "Intelligent digital menu with order management and automated CRM",
+      "full": "Complete development of a digital menu platform with advanced order management system, customer CRM and embedded artificial intelligence for marketing and relationship automation.",
+      "features": [
+        "Responsive and intuitive digital menu",
+        "Real-time order management system",
+        "Complete CRM with customer history",
+        "AI for automatic repurchase messages",
+        "Post-sale feedback automation",
+        "Sales analytics dashboard",
+        "WhatsApp Business integration"
+      ]
+    },
+    "rvtec": {
+      "category": "App + System + Landing Page",
+      "short": "RAT Mobile - Complete process digitization and financial panel",
+      "full": "Development of RAT Mobile application (Technical Service Report) for complete digitization of company operational processes, including integrated financial management panel and institutional landing page.",
+      "features": [
+        "RAT Mobile app for field technicians",
+        "Digital reports with electronic signature",
+        "Complete admin panel",
+        "Integrated financial management",
+        "Service order control",
+        "Optimized institutional landing page",
+        "Productivity metrics dashboard"
+      ]
+    },
+    "arenaparts": {
+      "category": "E-commerce + ML Integration",
+      "short": "Online store integrated with Mercado Livre + Landing Page",
+      "full": "Development of complete online store for used vehicle parts commerce, with full Mercado Livre integration for stock synchronization, plus institutional landing page for new customer acquisition.",
+      "features": [
+        "Complete and responsive online store",
+        "Mercado Livre integration",
+        "Automatic stock synchronization",
+        "Multichannel order management",
+        "High-conversion landing page",
+        "SEO optimized for auto parts",
+        "Optimized checkout"
+      ]
+    }
+  },
+  "clients": {
+    "badge": "Success Partners",
+    "title": "Building Results.",
+    "titleAccent": "The Trust of Those Who Bet High.",
+    "subtitle": "Companies that trusted INOVASYS to digitize their operation or boost their online sales.",
+    "cta": "Ask Your Questions and Request a Free Quote"
+  },
+  "socialProof": {
+    "title": "More than",
+    "titleAccent": "50 projects",
+    "titleEnd": "delivered with excellence",
+    "description": "We work with companies that want to grow in a scalable and sustainable way, transforming complex challenges into measurable digital opportunities.",
+    "teamCaption": "Team dedicated to your digital success",
+    "metric1": "100%",
+    "metric1Label": "Satisfied Clients",
+    "metric2": "8+",
+    "metric2Label": "Years in Market",
+    "metric3": "24h",
+    "metric3Label": "Agile Support"
+  },
+  "methodology": {
+    "title": "Cutting-Edge Technology.",
+    "titleAccent": "Your Idea, Our Flawless Execution.",
+    "step1": {
+      "title": "Strategy & UX/UI",
+      "description": "We define the structure and design to ensure the best experience and highest conversion."
+    },
+    "step2": {
+      "title": "Agile Development (React/TypeScript)",
+      "description": "Building the solution with the most modern and efficient market technologies (SPA, performance)."
+    },
+    "step3": {
+      "title": "Robust Back-end (Supabase/PostgreSQL)",
+      "description": "Security, scalability and controlled data access, ensuring a product that grows with you."
+    },
+    "step4": {
+      "title": "Delivery and Follow-up",
+      "description": "Launch and support to ensure the project achieves its main goal: Generate ROI."
+    }
+  },
+  "finalCta": {
+    "title": "If your project is complex,",
+    "titleAccent": "your partnership should be simple.",
+    "description": "Ready to have a digital asset that actually works for your business, instead of a cost?",
+    "cta": "Start Your Project With Us",
+    "ctaMobile": "Start Your Project",
+    "note": "Talk now with an INOVASYS Strategist"
+  },
+  "footer": {
+    "tagline": "Web Development & Custom Systems",
+    "tagline2": "Transforming processes into digital assets",
+    "servicesTitle": "Services",
+    "service1": "High-Converting Landing Pages",
+    "service2": "Web Systems (SaaS)",
+    "service3": "Institutional Sites",
+    "service4": "Digital Consulting",
+    "contactTitle": "Contact",
+    "copyright": "INOVASYS. All rights reserved.",
+    "creatorOf": "The creator of"
+  }
+}

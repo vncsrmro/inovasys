@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "cases": "Cases",
+    "clients": "Clientes",
+    "methodology": "Metodologia",
+    "contact": "Contato",
+    "whatsapp": "Falar no WhatsApp"
+  },
+  "hero": {
+    "title1": "Não Desenvolvemos Sites.",
+    "title2": "Criamos Máquinas de Venda e Automação.",
+    "description": "A INOVASYS é a parceira que transforma suas ideias e processos manuais em",
+    "systems": "Sistemas Web",
+    "and": "e",
+    "landingPages": "Landing Pages de Alta Conversão",
+    "descEnd": ", com design e tecnologia de ponta.",
+    "cta": "Quero um Projeto Fora da Curva",
+    "ctaMobile": "Inicie Seu Projeto",
+    "response": "Resposta em até 1 hora útil"
+  },
+  "services": {
+    "badge": "Nossos Focos de Atuação",
+    "title": "Digitalização Estratégica",
+    "subtitle": "Soluções sob medida para transformar seu negócio",
+    "landing": {
+      "title": "Landing Pages de Alta Conversão",
+      "description": "Páginas singulares, otimizadas para gerar leads ou vendas imediatas. Foco em UX/UI impecável e velocidade ultra-rápida.",
+      "metric": "Até 300% mais conversão"
+    },
+    "saas": {
+      "title": "Sistemas Web Personalizados (SaaS)",
+      "description": "Transformamos processos internos complexos em plataformas web seguras, escaláveis e sob medida para sua regra de negócio.",
+      "metric": "ROI em 6 meses"
+    },
+    "institutional": {
+      "title": "Sites Institucionais e Portfólios",
+      "description": "Presença digital robusta que reflete a autoridade da sua marca, com design moderno e arquitetura focada em SEO.",
+      "metric": "Autoridade digital"
+    }
+  },
+  "portfolio": {
+    "badge": "Projetos Recentes",
+    "title": "Cases de",
+    "titleAccent": "Sucesso",
+    "subtitle": "Conheça alguns dos projetos que transformaram negócios",
+    "viewDetails": "Ver detalhes",
+    "visitSite": "Visitar Site",
+    "similarProject": "Quero um Projeto Similar",
+    "features": "Funcionalidades Entregues",
+    "technologies": "Tecnologias Utilizadas",
+    "cuqui": {
+      "category": "Sistema Completo + IA",
+      "short": "Cardápio digital inteligente com gestão de pedidos e CRM automatizado",
+      "full": "Desenvolvimento completo de uma plataforma de cardápio digital com sistema avançado de gestão de pedidos, CRM de clientes e inteligência artificial embarcada para automação de marketing e relacionamento.",
+      "features": [
+        "Cardápio digital responsivo e intuitivo",
+        "Sistema de gestão de pedidos em tempo real",
+        "CRM completo com histórico de clientes",
+        "IA para mensagens automáticas de recompra",
+        "Automação de feedback pós-venda",
+        "Dashboard analítico de vendas",
+        "Integração com WhatsApp Business"
+      ]
+    },
+    "rvtec": {
+      "category": "App + Sistema + Landing Page",
+      "short": "RAT Móvel - Digitalização total de processos e painel financeiro",
+      "full": "Desenvolvimento do aplicativo RAT Móvel (Relatório de Atendimento Técnico) para digitalização completa dos processos operacionais da empresa, incluindo painel de gerenciamento financeiro integrado e landing page institucional.",
+      "features": [
+        "App RAT Móvel para técnicos em campo",
+        "Relatórios digitais com assinatura eletrônica",
+        "Painel administrativo completo",
+        "Gestão financeira integrada",
+        "Controle de ordens de serviço",
+        "Landing page institucional otimizada",
+        "Dashboard com métricas de produtividade"
+      ]
+    },
+    "arenaparts": {
+      "category": "E-commerce + Integração ML",
+      "short": "Loja virtual integrada com Mercado Livre + Landing Page",
+      "full": "Desenvolvimento de loja virtual completa para comércio de peças usadas de veículos, com integração total ao Mercado Livre para sincronização de estoque, além de landing page institucional para captação de novos clientes.",
+      "features": [
+        "Loja virtual completa e responsiva",
+        "Integração com Mercado Livre",
+        "Sincronização automática de estoque",
+        "Gestão de pedidos multicanal",
+        "Landing page de alta conversão",
+        "SEO otimizado para peças automotivas",
+        "Checkout otimizado"
+      ]
+    }
+  },
+  "clients": {
+    "badge": "Parceiros de Sucesso",
+    "title": "Construindo Resultados.",
+    "titleAccent": "A Confiança de Quem Aposta Alto.",
+    "subtitle": "Empresas que confiaram na INOVASYS para digitalizar sua operação ou impulsionar suas vendas online.",
+    "cta": "Tire Suas Dúvidas e Peça um Orçamento Sem Compromisso"
+  },
+  "socialProof": {
+    "title": "Mais de",
+    "titleAccent": "50 projetos",
+    "titleEnd": "entregues com excelência",
+    "description": "Trabalhamos com empresas que querem crescer de forma escalável e sustentável, transformando desafios complexos em oportunidades digitais mensuráveis.",
+    "teamCaption": "Time dedicado ao seu sucesso digital",
+    "metric1": "100%",
+    "metric1Label": "Cliente Satisfeito",
+    "metric2": "8+",
+    "metric2Label": "Anos Mercado",
+    "metric3": "24h",
+    "metric3Label": "Suporte Ágil"
+  },
+  "methodology": {
+    "title": "Tecnologia de Última Geração.",
+    "titleAccent": "Sua Ideia, Nossa Execução Impecável.",
+    "step1": {
+      "title": "Estratégia & UX/UI",
+      "description": "Definimos a estrutura e o design para garantir a melhor experiência e a maior conversão."
+    },
+    "step2": {
+      "title": "Desenvolvimento Ágil (React/TypeScript)",
+      "description": "Construção da solução com o que há de mais moderno e eficiente no mercado (SPA, performance)."
+    },
+    "step3": {
+      "title": "Back-end Robusto (Supabase/PostgreSQL)",
+      "description": "Segurança, escalabilidade e acesso controlado aos dados, garantindo um produto que cresce com você."
+    },
+    "step4": {
+      "title": "Entrega e Acompanhamento",
+      "description": "Lançamento e suporte para garantir que o projeto atinja seu objetivo principal: Gerar ROI."
+    }
+  },
+  "finalCta": {
+    "title": "Se o seu projeto é complexo,",
+    "titleAccent": "sua parceria deve ser simples.",
+    "description": "Pronto para ter um ativo digital que realmente trabalha para o seu negócio, em vez de um custo?",
+    "cta": "Inicie Seu Projeto Conosco",
+    "ctaMobile": "Inicie Seu Projeto",
+    "note": "Fale agora com um Estrategista da INOVASYS"
+  },
+  "footer": {
+    "tagline": "Desenvolvimento Web & Sistemas Customizados",
+    "tagline2": "Transformando processos em ativos digitais",
+    "servicesTitle": "Serviços",
+    "service1": "Landing Pages de Alta Conversão",
+    "service2": "Sistemas Web (SaaS)",
+    "service3": "Sites Institucionais",
+    "service4": "Consultoria Digital",
+    "contactTitle": "Contato",
+    "copyright": "INOVASYS. Todos os direitos reservados.",
+    "creatorOf": "A criadora do"
+  }
+}

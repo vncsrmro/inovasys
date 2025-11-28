@@ -118,16 +118,43 @@ All colors MUST be HSL.
 }
 
 @layer base {
-* {
-  @apply border-border;
-}
+  * {
+    @apply border-border;
+  }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Performance optimizations */
+@layer utilities {
+  .contain-layout {
+    contain: layout;
+  }
+  
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-fade-in-up,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-scale-in,
+    .animate-float,
+    .animate-grid,
+    .animate-bounce-subtle {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 }
