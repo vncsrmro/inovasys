@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AIServices from "@/components/AIServices";
 import Portfolio from "@/components/Portfolio";
 import ClientsCarousel from "@/components/ClientsCarousel";
 import SocialProof from "@/components/SocialProof";
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <AIServices />
         <Portfolio />
         <ClientsCarousel />
         <SocialProof />

@@ -37,7 +37,52 @@
       "title": "Institutional Sites & Portfolios",
       "description": "Robust digital presence that reflects your brand's authority, with modern design and SEO-focused architecture.",
       "metric": "Digital authority"
+    },
+    "ai": {
+      "title": "AI Customer Service",
+      "description": "Automate your business support with artificial intelligence that works 24/7, integrated with WhatsApp.",
+      "metric": "70% cost reduction"
     }
+  },
+  "aiServices": {
+    "badge": "Artificial Intelligence",
+    "title": "Support that",
+    "titleAccent": "Never Sleeps.",
+    "subtitle": "Automate conversations, qualify leads and sell more with conversational AI trained specifically for your business.",
+    "chatDemo": {
+      "user1": "Hi, I'd like to schedule an appointment",
+      "ai1": "Hello! 😊 Sure! Which specialty would you like to schedule?",
+      "user2": "Dermatology, please",
+      "ai2": "Perfect! We have slots available tomorrow at 2pm or 4pm. Which do you prefer?",
+      "user3": "2pm is great",
+      "ai3": "Scheduled! ✅ Dr. Ana Silva, tomorrow at 2pm. Confirmation sent to your WhatsApp!"
+    },
+    "benefits": {
+      "available": { "title": "24/7", "desc": "Always available" },
+      "cost": { "title": "-70%", "desc": "Operating costs" },
+      "response": { "title": "<3s", "desc": "Response time" },
+      "scale": { "title": "∞", "desc": "Simultaneous chats" }
+    },
+    "niches": {
+      "title": "For All Industries",
+      "clinics": { "name": "Clinics", "desc": "Scheduling & triage" },
+      "stores": { "name": "Stores", "desc": "Support & sales" },
+      "restaurants": { "name": "Restaurants", "desc": "Orders & reservations" },
+      "realestate": { "name": "Real Estate", "desc": "Lead qualification" },
+      "schools": { "name": "Schools", "desc": "Enrollment & FAQ" },
+      "services": { "name": "Services", "desc": "Auto quotes" }
+    },
+    "features": {
+      "title": "Cutting-Edge Technology",
+      "whatsapp": "Native WhatsApp integration",
+      "training": "AI trained with your data",
+      "handoff": "Smart handoff to human",
+      "dashboard": "Metrics dashboard",
+      "languages": "Multi-language support",
+      "integration": "CRM integration"
+    },
+    "cta": "I Want AI for My Business",
+    "ctaNote": "Free demo • No commitment"
   },
   "portfolio": {
     "badge": "Recent Projects",
