@@ -1,17 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ExternalLink,
-  X,
-  Sparkles,
-  Globe,
-  Smartphone,
-  ShoppingCart,
-  Bot,
-  BarChart3,
-  FileText,
-} from "lucide-react";
+import { ExternalLink, X, Sparkles, Globe, Smartphone, ShoppingCart, Bot, BarChart3, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Project {
@@ -38,8 +28,7 @@ const projects: Project[] = [
     featuresKey: "portfolio.cuqui.features",
     technologies: ["React", "Node.js", "PostgreSQL", "OpenAI API", "WhatsApp API"],
     url: "https://cuqui.com.br",
-    mockupUrl:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=500&fit=crop&q=80",
+    mockupUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=500&fit=crop&q=80",
     icon: Bot,
     gradient: "from-violet-500 to-purple-600",
   },
@@ -52,22 +41,20 @@ const projects: Project[] = [
     featuresKey: "portfolio.rvtec.features",
     technologies: ["React Native", "React", "Supabase", "TypeScript"],
     url: "https://rvtecassistencia.com.br",
-    mockupUrl:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop&q=80",
+    mockupUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=500&fit=crop&q=80",
     icon: Smartphone,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: "arenaparts",
-    name: "Arena Parts",
+    name: "ARENA PARTS",
     categoryKey: "portfolio.arenaparts.category",
     shortDescKey: "portfolio.arenaparts.short",
     fullDescKey: "portfolio.arenaparts.full",
     featuresKey: "portfolio.arenaparts.features",
     technologies: ["React", "Node.js", "Mercado Livre API", "PostgreSQL"],
-    url: "#",
-    mockupUrl:
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=500&fit=crop&q=80",
+    url: "https://arenaparts.net.br",
+    mockupUrl: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&h=500&fit=crop&q=80",
     icon: ShoppingCart,
     gradient: "from-amber-500 to-orange-600",
   },
@@ -117,9 +104,7 @@ const Portfolio = () => {
               <div className="relative bg-card rounded-3xl overflow-hidden border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/10 hover:-translate-y-2">
                 {/* Mockup Image */}
                 <div className="relative h-52 overflow-hidden">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80`}
-                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-80`} />
                   <img
                     src={project.mockupUrl}
                     alt={project.name}
@@ -204,9 +189,7 @@ const Portfolio = () => {
             >
               {/* Modal Header with Image */}
               <div className="relative h-64 sm:h-80">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient}`}
-                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${selectedProject.gradient}`} />
                 <img
                   src={selectedProject.mockupUrl}
                   alt={selectedProject.name}
@@ -228,17 +211,13 @@ const Portfolio = () => {
                     <selectedProject.icon className="w-3 h-3" />
                     {t(selectedProject.categoryKey)}
                   </span>
-                  <h3 className="text-3xl sm:text-4xl font-black text-white">
-                    {selectedProject.name}
-                  </h3>
+                  <h3 className="text-3xl sm:text-4xl font-black text-white">{selectedProject.name}</h3>
                 </div>
               </div>
 
               {/* Modal Content */}
               <div className="p-6 sm:p-8 space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  {t(selectedProject.fullDescKey)}
-                </p>
+                <p className="text-muted-foreground leading-relaxed">{t(selectedProject.fullDescKey)}</p>
 
                 {/* Features */}
                 <div>
@@ -248,10 +227,7 @@ const Portfolio = () => {
                   </h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {getFeatures(selectedProject.featuresKey).map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
+                      <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -280,15 +256,8 @@ const Portfolio = () => {
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-border">
                   {selectedProject.url !== "#" && (
-                    <Button
-                      asChild
-                      className="bg-accent hover:bg-accent/90 text-primary font-bold flex-1"
-                    >
-                      <a
-                        href={selectedProject.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                    <Button asChild className="bg-accent hover:bg-accent/90 text-primary font-bold flex-1">
+                      <a href={selectedProject.url} target="_blank" rel="noopener noreferrer">
                         <Globe className="w-4 h-4 mr-2" />
                         {t("portfolio.visitSite")}
                       </a>
