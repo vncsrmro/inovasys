@@ -37,7 +37,52 @@
       "title": "Sites Institucionais e Portfólios",
       "description": "Presença digital robusta que reflete a autoridade da sua marca, com design moderno e arquitetura focada em SEO.",
       "metric": "Autoridade digital"
+    },
+    "ai": {
+      "title": "Atendimento com IA",
+      "description": "Automatize o atendimento do seu negócio com inteligência artificial que funciona 24/7, integrada ao WhatsApp.",
+      "metric": "70% menos custos"
     }
+  },
+  "aiServices": {
+    "badge": "Inteligência Artificial",
+    "title": "Atendimento que",
+    "titleAccent": "Nunca Dorme.",
+    "subtitle": "Automatize conversas, qualifique leads e venda mais com IA conversacional treinada especificamente para o seu negócio.",
+    "chatDemo": {
+      "user1": "Olá, gostaria de agendar uma consulta",
+      "ai1": "Olá! 😊 Claro! Para qual especialidade você deseja agendar?",
+      "user2": "Dermatologia, por favor",
+      "ai2": "Perfeito! Temos horários disponíveis amanhã às 14h ou 16h. Qual prefere?",
+      "user3": "14h está ótimo",
+      "ai3": "Agendado! ✅ Dra. Ana Silva, amanhã às 14h. Enviei a confirmação no seu WhatsApp!"
+    },
+    "benefits": {
+      "available": { "title": "24/7", "desc": "Disponível sempre" },
+      "cost": { "title": "-70%", "desc": "Custos operacionais" },
+      "response": { "title": "<3s", "desc": "Tempo de resposta" },
+      "scale": { "title": "∞", "desc": "Conversas simultâneas" }
+    },
+    "niches": {
+      "title": "Para Todos os Segmentos",
+      "clinics": { "name": "Clínicas", "desc": "Agendamentos e triagem" },
+      "stores": { "name": "Lojas", "desc": "Suporte e vendas" },
+      "restaurants": { "name": "Restaurantes", "desc": "Pedidos e reservas" },
+      "realestate": { "name": "Imobiliárias", "desc": "Qualificação de leads" },
+      "schools": { "name": "Escolas", "desc": "Matrículas e dúvidas" },
+      "services": { "name": "Serviços", "desc": "Orçamentos automáticos" }
+    },
+    "features": {
+      "title": "Tecnologia de Ponta",
+      "whatsapp": "Integração nativa com WhatsApp",
+      "training": "IA treinada com seus dados",
+      "handoff": "Transferência para humano",
+      "dashboard": "Dashboard de métricas",
+      "languages": "Suporte multi-idiomas",
+      "integration": "Integração com seu CRM"
+    },
+    "cta": "Quero IA no Meu Negócio",
+    "ctaNote": "Demonstração gratuita • Sem compromisso"
   },
   "portfolio": {
     "badge": "Projetos Recentes",
