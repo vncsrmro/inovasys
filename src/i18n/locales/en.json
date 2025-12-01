@@ -84,6 +84,174 @@
     "cta": "I Want AI for My Business",
     "ctaNote": "Free demo • No commitment"
   },
+  "automacao": {
+    "cta": {
+      "short": "Talk to Expert"
+    },
+    "hero": {
+      "badge": "Technology That Sells For You",
+      "title1": "Stop Losing Customers",
+      "title2": "Due to Lack of Support.",
+      "subtitle": "AI agents that serve, qualify and sell 24 hours a day, 7 days a week. Integrated with your business WhatsApp.",
+      "cta": "I Want to Automate My Support",
+      "cta2": "See Demo",
+      "trust1": "WhatsApp Business Integration",
+      "trust2": "100% Secure Data",
+      "trust3": "Humanized Support"
+    },
+    "problem": {
+      "title": "Is Your Support Costing Too Much?",
+      "subtitle": "Most businesses face these problems daily:",
+      "stat": "of customers give up if not served within 5 minutes"
+    },
+    "problems": {
+      "1": "Customers waiting hours for a response",
+      "2": "Overloaded team with repetitive questions",
+      "3": "Lost sales outside business hours",
+      "4": "High cost with agents for low volume"
+    },
+    "solution": {
+      "badge": "The Solution",
+      "title": "AI Agents Trained For Your Business",
+      "subtitle": "Automate support without losing the personalization your customers deserve."
+    },
+    "solutions": {
+      "1": "24/7 instant support",
+      "2": "Up to 70% cost reduction",
+      "3": "Responses in under 3 seconds",
+      "4": "Infinite scalability"
+    },
+    "demo": {
+      "title": "See AI in Action",
+      "subtitle": "Real simulation of how our agent serves different business types:",
+      "tabs": {
+        "clinic": "Clinic",
+        "store": "Store",
+        "restaurant": "Restaurant"
+      },
+      "clinic": {
+        "user1": "Hi, I need to schedule an appointment",
+        "ai1": "Hello! 😊 Sure! Which specialty would you like to schedule?",
+        "user2": "Dermatology, tomorrow if possible",
+        "ai2": "Perfect! We have slots at 2pm and 4pm. Which do you prefer? I can confirm and send a reminder to your WhatsApp!"
+      },
+      "store": {
+        "user1": "Do you have Nike Air Max size 10?",
+        "ai1": "Yes we do! 🎉 Nike Air Max is available in size 10. Should I reserve it for you or send the purchase link?",
+        "user2": "Send the link please",
+        "ai2": "Done! 🛒 Here's the direct link with free shipping. If you need anything else, just ask!"
+      },
+      "restaurant": {
+        "user1": "I want to order for delivery",
+        "ai1": "Great! 🍕 I'll help you. Want to see our menu or do you already know what you want?",
+        "user2": "A large pepperoni pizza",
+        "ai2": "Large pepperoni pizza noted! 📝 Total is $24.90. Confirm delivery address? Estimated 40 minutes!"
+      }
+    },
+    "metrics": {
+      "1": "Cost reduction",
+      "2": "Availability",
+      "3": "Response time",
+      "4": "Conversations/month managed"
+    },
+    "niches": {
+      "title": "Works For Any Industry",
+      "subtitle": "Our AI adapts to your business's specific needs:",
+      "clinics": { "name": "Clinics & Offices", "desc": "Scheduling & triage" },
+      "stores": { "name": "E-commerce & Stores", "desc": "Sales & support" },
+      "restaurants": { "name": "Restaurants & Delivery", "desc": "Automated orders" },
+      "realestate": { "name": "Real Estate", "desc": "Lead qualification" },
+      "schools": { "name": "Schools & Courses", "desc": "Enrollment & FAQ" },
+      "services": { "name": "Service Providers", "desc": "Automatic quotes" }
+    },
+    "features": {
+      "title": "Cutting-Edge Technology Included",
+      "1": "Native WhatsApp Business integration",
+      "2": "AI specifically trained with your data",
+      "3": "Smart handoff to human agent",
+      "4": "Complete dashboard with real-time metrics",
+      "5": "Multi-language support (PT, EN, ES)",
+      "6": "Integration with your CRM and existing systems"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "1": {
+        "role": "Dermatology Clinic",
+        "text": "We reduced scheduling calls by 80%. The AI handles almost everything on its own!"
+      },
+      "2": {
+        "role": "Online Clothing Store",
+        "text": "Our after-hours sales increased 40% since implementation."
+      },
+      "3": {
+        "role": "Delivery Restaurant",
+        "text": "Response time dropped from 15 minutes to 3 seconds. Customers love it!"
+      }
+    },
+    "plans": {
+      "title": "Choose the Ideal Plan",
+      "subtitle": "Start small and scale as needed:",
+      "guarantee": "7-day unconditional guarantee",
+      "starter": {
+        "f1": "Up to 500 conversations/month",
+        "f2": "1 channel (WhatsApp)",
+        "f3": "Pre-configured responses",
+        "f4": "Email support",
+        "cta": "Start Now"
+      },
+      "pro": {
+        "badge": "MOST CHOSEN",
+        "f1": "Up to 2,000 conversations/month",
+        "f2": "WhatsApp + Instagram",
+        "f3": "AI trained with your data",
+        "f4": "Metrics dashboard",
+        "f5": "Priority support",
+        "cta": "Choose Pro"
+      },
+      "enterprise": {
+        "f1": "Unlimited conversations",
+        "f2": "All channels",
+        "f3": "100% customized AI",
+        "f4": "Custom integrations",
+        "f5": "Dedicated account manager",
+        "cta": "Talk to Sales"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "1": {
+        "q": "Can the AI answer any question?",
+        "a": "The AI is specifically trained for your business and answers the most frequent questions. For complex cases, it automatically transfers to a human agent."
+      },
+      "2": {
+        "q": "How long does implementation take?",
+        "a": "Basic implementation takes 3 to 7 business days. This includes AI training with your information and WhatsApp Business integration."
+      },
+      "3": {
+        "q": "Do I need technical knowledge?",
+        "a": "No! We handle all the technical work. You just need to provide your business information and approve the AI responses."
+      },
+      "4": {
+        "q": "Can I cancel anytime?",
+        "a": "Yes, our plans are monthly and you can cancel whenever you want. Plus, we offer a 7-day unconditional guarantee."
+      },
+      "5": {
+        "q": "Does the AI completely replace my team?",
+        "a": "The AI is designed to complement your team, not replace it. It handles repetitive tasks, freeing your team for cases that truly need human attention."
+      }
+    },
+    "final": {
+      "badge": "Limited Spots This Month",
+      "title": "Ready to Never",
+      "title2": "Lose Another Customer?",
+      "subtitle": "Join companies that have already automated their support and increased their sales.",
+      "cta": "I Want to Automate Now",
+      "note": "Free demo • No commitment • Response within 1 hour"
+    },
+    "footer": {
+      "product": "A product by"
+    }
+  },
   "portfolio": {
     "badge": "Recent Projects",
     "title": "Success",

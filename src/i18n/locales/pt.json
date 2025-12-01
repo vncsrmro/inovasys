@@ -84,6 +84,174 @@
     "cta": "Quero IA no Meu Negócio",
     "ctaNote": "Demonstração gratuita • Sem compromisso"
   },
+  "automacao": {
+    "cta": {
+      "short": "Falar com Especialista"
+    },
+    "hero": {
+      "badge": "Tecnologia que Vende por Você",
+      "title1": "Pare de Perder Clientes",
+      "title2": "Por Falta de Atendimento.",
+      "subtitle": "Agentes de IA que atendem, qualificam e vendem 24 horas por dia, 7 dias por semana. Integrados ao WhatsApp do seu negócio.",
+      "cta": "Quero Automatizar Meu Atendimento",
+      "cta2": "Ver Demonstração",
+      "trust1": "Integração WhatsApp Business",
+      "trust2": "Dados 100% Seguros",
+      "trust3": "Suporte Humanizado"
+    },
+    "problem": {
+      "title": "Seu Atendimento Está Custando Caro?",
+      "subtitle": "A maioria dos negócios enfrenta esses problemas diariamente:",
+      "stat": "dos clientes desistem se não forem atendidos em até 5 minutos"
+    },
+    "problems": {
+      "1": "Clientes esperando horas por resposta",
+      "2": "Equipe sobrecarregada com perguntas repetitivas",
+      "3": "Vendas perdidas fora do horário comercial",
+      "4": "Custo alto com atendentes para volume baixo"
+    },
+    "solution": {
+      "badge": "A Solução",
+      "title": "Agentes de IA Treinados Para Seu Negócio",
+      "subtitle": "Automatize o atendimento sem perder a personalização que seus clientes merecem."
+    },
+    "solutions": {
+      "1": "Atendimento 24/7 instantâneo",
+      "2": "Redução de até 70% nos custos",
+      "3": "Respostas em menos de 3 segundos",
+      "4": "Escalabilidade infinita"
+    },
+    "demo": {
+      "title": "Veja a IA em Ação",
+      "subtitle": "Simulação real de como nosso agente atende diferentes tipos de negócio:",
+      "tabs": {
+        "clinic": "Clínica",
+        "store": "Loja",
+        "restaurant": "Restaurante"
+      },
+      "clinic": {
+        "user1": "Olá, preciso agendar uma consulta",
+        "ai1": "Olá! 😊 Claro! Para qual especialidade você deseja agendar?",
+        "user2": "Dermatologia, para amanhã se possível",
+        "ai2": "Perfeito! Temos horários às 14h e 16h. Qual prefere? Posso já confirmar e enviar o lembrete no seu WhatsApp!"
+      },
+      "store": {
+        "user1": "Vocês têm o tênis Nike Air Max 42?",
+        "ai1": "Temos sim! 🎉 O Nike Air Max está disponível no 42. Posso reservar para você ou prefere que eu envie o link para compra?",
+        "user2": "Envia o link por favor",
+        "ai2": "Pronto! 🛒 Aqui está o link direto para compra com frete grátis. Se precisar de ajuda com mais alguma coisa, é só chamar!"
+      },
+      "restaurant": {
+        "user1": "Quero fazer um pedido para entrega",
+        "ai1": "Ótimo! 🍕 Vou te ajudar. Você quer ver nosso cardápio ou já sabe o que vai pedir?",
+        "user2": "Uma pizza grande de calabresa",
+        "ai2": "Pizza de calabresa grande anotada! 📝 O total é R$ 49,90. Confirmo o endereço de entrega? Previsão de 40 minutos!"
+      }
+    },
+    "metrics": {
+      "1": "Redução em custos",
+      "2": "Disponibilidade",
+      "3": "Tempo de resposta",
+      "4": "Conversas/mês gerenciadas"
+    },
+    "niches": {
+      "title": "Funciona Para Qualquer Segmento",
+      "subtitle": "Nossa IA se adapta às necessidades específicas do seu negócio:",
+      "clinics": { "name": "Clínicas e Consultórios", "desc": "Agendamentos e triagem" },
+      "stores": { "name": "E-commerces e Lojas", "desc": "Vendas e suporte" },
+      "restaurants": { "name": "Restaurantes e Delivery", "desc": "Pedidos automatizados" },
+      "realestate": { "name": "Imobiliárias", "desc": "Qualificação de leads" },
+      "schools": { "name": "Escolas e Cursos", "desc": "Matrículas e dúvidas" },
+      "services": { "name": "Prestadores de Serviço", "desc": "Orçamentos automáticos" }
+    },
+    "features": {
+      "title": "Tecnologia de Ponta Inclusa",
+      "1": "Integração nativa com WhatsApp Business",
+      "2": "IA treinada especificamente com seus dados",
+      "3": "Transferência inteligente para atendente humano",
+      "4": "Dashboard completo com métricas em tempo real",
+      "5": "Suporte a múltiplos idiomas (PT, EN, ES)",
+      "6": "Integração com seu CRM e sistemas existentes"
+    },
+    "testimonials": {
+      "title": "O Que Nossos Clientes Dizem",
+      "1": {
+        "role": "Clínica Dermatológica",
+        "text": "Reduzimos em 80% as ligações para agendamento. A IA resolve quase tudo sozinha!"
+      },
+      "2": {
+        "role": "Loja de Roupas Online",
+        "text": "Nossas vendas fora do horário comercial aumentaram 40% desde a implementação."
+      },
+      "3": {
+        "role": "Restaurante Delivery",
+        "text": "O tempo de resposta caiu de 15 minutos para 3 segundos. Os clientes adoram!"
+      }
+    },
+    "plans": {
+      "title": "Escolha o Plano Ideal",
+      "subtitle": "Comece pequeno e escale conforme sua necessidade:",
+      "guarantee": "7 dias de garantia incondicional",
+      "starter": {
+        "f1": "Até 500 conversas/mês",
+        "f2": "1 canal (WhatsApp)",
+        "f3": "Respostas pré-configuradas",
+        "f4": "Suporte por email",
+        "cta": "Começar Agora"
+      },
+      "pro": {
+        "badge": "MAIS ESCOLHIDO",
+        "f1": "Até 2.000 conversas/mês",
+        "f2": "WhatsApp + Instagram",
+        "f3": "IA treinada com seus dados",
+        "f4": "Dashboard de métricas",
+        "f5": "Suporte prioritário",
+        "cta": "Escolher Pro"
+      },
+      "enterprise": {
+        "f1": "Conversas ilimitadas",
+        "f2": "Todos os canais",
+        "f3": "IA 100% personalizada",
+        "f4": "Integrações customizadas",
+        "f5": "Gerente de conta dedicado",
+        "cta": "Falar com Vendas"
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "1": {
+        "q": "A IA consegue responder qualquer pergunta?",
+        "a": "A IA é treinada especificamente para o seu negócio e responde as perguntas mais frequentes. Para casos complexos, ela transfere automaticamente para um atendente humano."
+      },
+      "2": {
+        "q": "Quanto tempo leva para implementar?",
+        "a": "A implementação básica leva de 3 a 7 dias úteis. Isso inclui o treinamento da IA com suas informações e integração com o WhatsApp Business."
+      },
+      "3": {
+        "q": "Preciso ter conhecimento técnico?",
+        "a": "Não! Nós cuidamos de toda a parte técnica. Você só precisa nos fornecer as informações do seu negócio e aprovar as respostas da IA."
+      },
+      "4": {
+        "q": "Posso cancelar a qualquer momento?",
+        "a": "Sim, nossos planos são mensais e você pode cancelar quando quiser. Além disso, oferecemos 7 dias de garantia incondicional."
+      },
+      "5": {
+        "q": "A IA substitui completamente minha equipe?",
+        "a": "A IA foi projetada para complementar sua equipe, não substituí-la. Ela lida com tarefas repetitivas, liberando sua equipe para casos que realmente precisam de atenção humana."
+      }
+    },
+    "final": {
+      "badge": "Vagas Limitadas Este Mês",
+      "title": "Pronto Para Nunca",
+      "title2": "Perder Outro Cliente?",
+      "subtitle": "Junte-se às empresas que já automatizaram seu atendimento e aumentaram suas vendas.",
+      "cta": "Quero Automatizar Agora",
+      "note": "Demonstração gratuita • Sem compromisso • Resposta em até 1 hora"
+    },
+    "footer": {
+      "product": "Um produto"
+    }
+  },
   "portfolio": {
     "badge": "Projetos Recentes",
     "title": "Cases de",
