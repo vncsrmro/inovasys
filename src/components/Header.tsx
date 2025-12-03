@@ -3,22 +3,26 @@ import { useTranslation } from "react-i18next";
 import logoInovasys from "@/assets/logo-inovasys.png";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { MessageCircle, Menu } from "lucide-react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Header = () => {
   const { t } = useTranslation();
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+    setScrolled(latest > 50);
+  });
 
   const handleWhatsAppClick = () => {
     window.open(
@@ -41,9 +45,15 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-primary shadow-lg" : "bg-transparent"
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        scrolled ? "bg-background/80 backdrop-blur-md border-b border-white/5" : "bg-transparent"
       }`}
     >
       <div className="container px-4 sm:px-6">
@@ -52,18 +62,18 @@ const Header = () => {
             <img
               src={logoInovasys}
               alt="INOVASYS"
-              className="h-10 w-auto cursor-pointer hover:opacity-80 transition-all duration-300 brightness-0 invert"
+              className="h-8 w-auto cursor-pointer hover:opacity-80 transition-all duration-300"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/90 hover:text-accent transition-colors"
+                className="text-sm font-medium text-white/70 hover:text-primary transition-colors tracking-wide"
               >
                 {link.label}
               </a>
@@ -71,15 +81,15 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-accent hover:bg-accent/90 text-primary font-semibold px-3 sm:px-4"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,102,0.4)]"
               size="sm"
             >
-              <MessageCircle className="h-4 w-4 sm:mr-2" />
-              <span className="hidden lg:inline">{t("nav.whatsapp")}</span>
+              <MessageCircle className="h-4 w-4 mr-2" />
+              {t("nav.whatsapp")}
             </Button>
           </div>
 
@@ -98,7 +108,7 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-primary border-white/10 w-[300px] p-0"
+                className="bg-background border-l border-white/10 w-[300px] p-0"
               >
                 <div className="flex flex-col h-full">
                   {/* Header */}
@@ -106,7 +116,7 @@ const Header = () => {
                     <img
                       src={logoInovasys}
                       alt="INOVASYS"
-                      className="h-8 w-auto brightness-0 invert"
+                      className="h-6 w-auto"
                     />
                   </div>
 
@@ -117,7 +127,7 @@ const Header = () => {
                         key={link.href}
                         href={link.href}
                         onClick={handleNavClick}
-                        className="flex items-center px-4 py-3 text-white/90 hover:text-accent hover:bg-white/10 rounded-lg transition-all font-medium"
+                        className="flex items-center px-4 py-3 text-white/70 hover:text-primary hover:bg-white/5 rounded-lg transition-all font-medium"
                       >
                         {link.label}
                       </a>
@@ -135,7 +145,7 @@ const Header = () => {
                         handleWhatsAppClick();
                         handleNavClick();
                       }}
-                      className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold py-6"
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold py-6 rounded-full"
                     >
                       <MessageCircle className="h-5 w-5 mr-2" />
                       {t("nav.whatsapp")}
@@ -147,7 +157,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

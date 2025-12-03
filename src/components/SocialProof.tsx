@@ -1,64 +1,107 @@
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const SocialProof = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background via-muted/30 to-background relative overflow-hidden">
-      <div className="container px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+    <section className="py-32 bg-background relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="container px-4 sm:px-6 relative z-10">
+        <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Imagem do time/workspace */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl group animate-slide-in-left">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group border border-white/10"
+          >
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"
               alt="Equipe INOVASYS trabalhando em projetos"
               loading="lazy"
               decoding="async"
-              className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-80"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-lg font-semibold drop-shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+            <div className="absolute bottom-8 left-8 right-8 text-white">
+              <p className="text-xl font-bold drop-shadow-lg leading-relaxed">
                 {t("socialProof.teamCaption")}
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Texto e métricas */}
-          <div className="space-y-6 animate-slide-in-right">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
-              {t("socialProof.title")}{" "}
-              <span className="text-accent">{t("socialProof.titleAccent")}</span>{" "}
-              {t("socialProof.titleEnd")}
-            </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {t("socialProof.description")}
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-6">
-              <div className="space-y-2">
-                <p className="text-4xl sm:text-5xl font-black text-accent">
+          <div className="space-y-10">
+            <div className="space-y-6">
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight"
+              >
+                {t("socialProof.title")}{" "}
+                <span className="text-primary">{t("socialProof.titleAccent")}</span>{" "}
+                {t("socialProof.titleEnd")}
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-white/60 text-lg leading-relaxed"
+              >
+                {t("socialProof.description")}
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="space-y-2"
+              >
+                <p className="text-5xl sm:text-6xl font-black text-primary tracking-tighter">
                   {t("socialProof.metric1")}
                 </p>
-                <p className="text-sm text-muted-foreground font-medium">
+                <p className="text-sm text-white/50 font-medium uppercase tracking-wider">
                   {t("socialProof.metric1Label")}
                 </p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-4xl sm:text-5xl font-black text-accent">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="space-y-2"
+              >
+                <p className="text-5xl sm:text-6xl font-black text-primary tracking-tighter">
                   {t("socialProof.metric2")}
                 </p>
-                <p className="text-sm text-muted-foreground font-medium">
+                <p className="text-sm text-white/50 font-medium uppercase tracking-wider">
                   {t("socialProof.metric2Label")}
                 </p>
-              </div>
-              <div className="space-y-2">
-                <p className="text-4xl sm:text-5xl font-black text-accent">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="space-y-2"
+              >
+                <p className="text-5xl sm:text-6xl font-black text-primary tracking-tighter">
                   {t("socialProof.metric3")}
                 </p>
-                <p className="text-sm text-muted-foreground font-medium">
+                <p className="text-sm text-white/50 font-medium uppercase tracking-wider">
                   {t("socialProof.metric3Label")}
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

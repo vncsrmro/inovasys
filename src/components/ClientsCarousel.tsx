@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { motion } from "framer-motion";
 import logoArquitetura from "@/assets/clients/arquiteturastival.png";
 import logoBosch from "@/assets/clients/bosch.png";
 import logoCnh from "@/assets/clients/cnhagora.png";
@@ -36,56 +37,74 @@ const ClientsCarousel = () => {
   return (
     <section
       id="clientes"
-      className="py-24 bg-gradient-to-br from-primary via-primary to-primary/90 relative overflow-hidden contain-layout"
+      className="py-32 bg-background relative overflow-hidden"
     >
-      {/* Background pattern - optimized */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:40px_40px]" />
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
-      {/* Decorative elements - reduced blur */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-[80px] will-change-transform" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[80px] will-change-transform" />
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-16 space-y-4">
-          <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+        <div className="text-center mb-20 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold tracking-wide"
+          >
+            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             {t("clients.badge")}
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight"
+          >
             {t("clients.title")}
             <br />
-            <span className="text-accent">{t("clients.titleAccent")}</span>
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto">
+            <span className="text-primary">{t("clients.titleAccent")}</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-white/60 max-w-2xl mx-auto"
+          >
             {t("clients.subtitle")}
-          </p>
+          </motion.p>
         </div>
 
         {/* Modern Embla Carousel */}
-        <div className="relative">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="relative"
+        >
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-8">
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 basis-[140px] sm:basis-[160px] md:basis-[180px]"
+                  className="flex-shrink-0 basis-[160px] sm:basis-[200px] md:basis-[220px]"
                 >
                   <div className="group relative">
-                    <div className="w-full aspect-[4/3] flex items-center justify-center p-4 sm:p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 group-hover:border-accent/50 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
+                    <div className="w-full aspect-[3/2] flex items-center justify-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 group-hover:border-primary/50 group-hover:bg-white/10 transition-all duration-300 group-hover:scale-105">
                       <img
                         src={client.logo}
                         alt={`Logo ${client.name}`}
                         loading="lazy"
                         decoding="async"
-                        className="max-w-full max-h-full object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                        className="max-w-full max-h-full object-contain brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity duration-300"
                       />
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:-bottom-8 transition-all duration-300 pointer-events-none">
-                      <span className="text-xs font-medium text-white/80 whitespace-nowrap bg-primary/80 backdrop-blur-sm px-3 py-1 rounded-full">
-                        {client.name}
-                      </span>
                     </div>
                   </div>
                 </div>
@@ -94,16 +113,22 @@ const ClientsCarousel = () => {
           </div>
 
           {/* Gradient masks */}
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-primary to-transparent pointer-events-none z-10" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-primary to-transparent pointer-events-none z-10" />
-        </div>
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
+        </motion.div>
 
-        <div className="text-center mt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="text-center mt-16"
+        >
           <a
             href="https://wa.me/5519960003434?text=Olá! Quero saber mais sobre como a INOVASYS pode ajudar minha empresa."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm sm:text-base text-accent hover:text-accent/80 font-semibold transition-colors group"
+            className="inline-flex items-center gap-2 text-lg text-primary hover:text-primary/80 font-bold transition-colors group"
           >
             {t("clients.cta")}
             <svg
@@ -120,7 +145,7 @@ const ClientsCarousel = () => {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

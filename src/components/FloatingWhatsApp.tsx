@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const FloatingWhatsApp = () => {
   const handleClick = () => {
@@ -10,17 +11,24 @@ const FloatingWhatsApp = () => {
   };
 
   return (
-    <Button
-      onClick={handleClick}
-      size="lg"
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-accent hover:bg-accent/90 text-primary shadow-2xl hover:shadow-accent/50 rounded-full w-14 h-14 sm:w-16 sm:h-16 p-0 group animate-float"
-      aria-label="Falar no WhatsApp"
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 1, type: "spring", stiffness: 260, damping: 20 }}
+      className="fixed bottom-6 right-6 z-50"
     >
-      <MessageCircle className="h-6 w-6 sm:h-7 sm:w-7 group-hover:scale-110 transition-transform" />
-      
-      {/* Pulse effect */}
-      <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-20" />
-    </Button>
+      <Button
+        onClick={handleClick}
+        size="lg"
+        className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_rgba(0,255,102,0.4)] hover:shadow-[0_0_50px_rgba(0,255,102,0.6)] rounded-full w-16 h-16 p-0 group transition-all duration-300 hover:scale-110"
+        aria-label="Falar no WhatsApp"
+      >
+        <MessageCircle className="h-8 w-8 group-hover:rotate-12 transition-transform duration-300" />
+
+        {/* Pulse effect */}
+        <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
+      </Button>
+    </motion.div>
   );
 };
 

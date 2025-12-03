@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { 
-  Bot, 
-  Clock, 
-  TrendingDown, 
-  Zap, 
+import {
+  Bot,
+  Clock,
+  TrendingDown,
+  Zap,
   MessageSquare,
   Stethoscope,
   ShoppingBag,
@@ -16,6 +16,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const AIServices = () => {
   const { t } = useTranslation();
@@ -72,112 +73,141 @@ const AIServices = () => {
   const whatsappLink = "https://wa.me/5547999994511?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20IA%20para%20atendimento.";
 
   return (
-    <section id="ia" className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-slate-950 via-primary to-slate-950">
+    <section id="ia" className="relative py-32 overflow-hidden bg-background">
       {/* Neural network background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, hsl(var(--accent)) 1px, transparent 1px),
-                           radial-gradient(circle at 75% 75%, hsl(var(--accent)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
-        }} />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container relative z-10 px-4 md:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 mb-6">
-            <Bot className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">{t('aiServices.badge')}</span>
-            <Sparkles className="w-4 h-4 text-accent" />
-          </div>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
+          >
+            <Bot className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary">{t('aiServices.badge')}</span>
+            <Sparkles className="w-4 h-4 text-primary" />
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
+          >
             {t('aiServices.title')}{' '}
-            <span className="text-accent">{t('aiServices.titleAccent')}</span>
-          </h2>
-          <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
+            <span className="text-primary">{t('aiServices.titleAccent')}</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto"
+          >
             {t('aiServices.subtitle')}
-          </p>
+          </motion.p>
         </div>
 
         {/* Main content - Two columns */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
           {/* Chat Mockup */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-white/10 p-4 md:p-6 shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 rounded-[2.5rem] blur-2xl" />
+            <div className="relative bg-card/50 backdrop-blur-xl rounded-[2rem] border border-white/10 p-4 md:p-6 shadow-2xl">
               {/* Chat header */}
-              <div className="flex items-center gap-3 pb-4 border-b border-white/10 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent/50 flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-4 pb-6 border-b border-white/5 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <Bot className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-white text-sm">INOVASYS AI</p>
-                  <p className="text-xs text-accent flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <p className="font-bold text-white text-base">INOVASYS AI</p>
+                  <p className="text-xs text-primary flex items-center gap-2 font-medium">
+                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     Online
                   </p>
                 </div>
               </div>
 
               {/* Chat messages */}
-              <div className="space-y-3 min-h-[320px] md:min-h-[280px]">
+              <div className="space-y-4 min-h-[320px] md:min-h-[350px]">
                 {chatMessages.slice(0, visibleMessages).map((msg, idx) => (
                   <div
                     key={idx}
-                    className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'} animate-fade-in`}
+                    className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm ${
-                        msg.type === 'user'
-                          ? 'bg-accent text-primary rounded-br-md'
-                          : 'bg-white/10 text-white rounded-bl-md'
-                      }`}
+                      className={`max-w-[85%] px-5 py-3 rounded-2xl text-sm leading-relaxed ${msg.type === 'user'
+                          ? 'bg-primary text-primary-foreground font-medium rounded-br-sm'
+                          : 'bg-white/10 text-white/90 rounded-bl-sm'
+                        }`}
                     >
                       {msg.text}
                     </div>
                   </div>
                 ))}
-                
+
                 {/* Typing indicator */}
                 {visibleMessages < chatMessages.length && visibleMessages > 0 && chatMessages[visibleMessages]?.type === 'ai' && (
                   <div className="flex justify-start">
-                    <div className="bg-white/10 px-4 py-3 rounded-2xl rounded-bl-md flex gap-1">
-                      <span className="w-2 h-2 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '0ms' }} />
-                      <span className="w-2 h-2 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '150ms' }} />
-                      <span className="w-2 h-2 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '300ms' }} />
+                    <div className="bg-white/10 px-4 py-3 rounded-2xl rounded-bl-sm flex gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '0ms' }} />
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '150ms' }} />
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/60 animate-bounce" style={{ animationDelay: '300ms' }} />
                     </div>
                   </div>
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Benefits */}
-          <div className="space-y-8">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-10">
+            <div className="grid grid-cols-2 gap-6">
               {benefits.map((benefit, idx) => (
-                <div
+                <motion.div
                   key={idx}
-                  className="group p-5 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
                 >
-                  <benefit.icon className="w-8 h-8 text-accent mb-3 group-hover:scale-110 transition-transform" />
-                  <p className="text-2xl md:text-3xl font-bold text-white mb-1">{benefit.title}</p>
-                  <p className="text-sm text-white/60">{benefit.desc}</p>
-                </div>
+                  <benefit.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform" />
+                  <p className="text-2xl md:text-3xl font-bold text-white mb-2">{benefit.title}</p>
+                  <p className="text-sm text-white/50 leading-relaxed">{benefit.desc}</p>
+                </motion.div>
               ))}
             </div>
 
             {/* Features list */}
-            <div className="space-y-3">
-              <h3 className="text-lg font-semibold text-white mb-4">{t('aiServices.features.title')}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-white">{t('aiServices.features.title')}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-white/80 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 + idx * 0.05 }}
+                    className="flex items-center gap-3 text-white/70 text-sm font-medium"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span>{feature}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -185,22 +215,26 @@ const AIServices = () => {
         </div>
 
         {/* Niches Grid */}
-        <div className="mb-16">
-          <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-8">
+        <div className="mb-20">
+          <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-12">
             {t('aiServices.niches.title')}
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {niches.map((niche, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="group p-4 rounded-xl bg-white/5 border border-white/10 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300 text-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+                className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 text-center"
               >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-accent/20 flex items-center justify-center group-hover:bg-accent/30 group-hover:scale-110 transition-all">
-                  <niche.icon className="w-6 h-6 text-accent" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+                  <niche.icon className="w-7 h-7 text-primary" />
                 </div>
-                <p className="font-semibold text-white text-sm mb-1">{niche.name}</p>
-                <p className="text-xs text-white/50">{niche.desc}</p>
-              </div>
+                <p className="font-bold text-white text-sm mb-2">{niche.name}</p>
+                <p className="text-xs text-white/40 leading-relaxed">{niche.desc}</p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -210,14 +244,14 @@ const AIServices = () => {
           <Button
             asChild
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-primary font-bold px-8 py-6 text-lg rounded-xl shadow-lg shadow-accent/25 hover:shadow-accent/40 transition-all"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-10 py-8 text-lg rounded-full shadow-[0_0_30px_rgba(0,255,102,0.25)] hover:shadow-[0_0_50px_rgba(0,255,102,0.4)] transition-all hover:scale-105"
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              <Bot className="w-5 h-5 mr-2" />
+              <Bot className="w-6 h-6 mr-3" />
               {t('aiServices.cta')}
             </a>
           </Button>
-          <p className="text-white/50 text-sm mt-4">{t('aiServices.ctaNote')}</p>
+          <p className="text-white/40 text-sm mt-6">{t('aiServices.ctaNote')}</p>
         </div>
       </div>
     </section>
