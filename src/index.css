@@ -9,7 +9,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Default to Dark Mode Futurista */
-    --background: 225 59% 11%; /* #0B132B */
+    --background: 225 59% 11%;
+    /* #0B132B */
     --foreground: 0 0% 98%;
 
     --card: 225 50% 13%;
@@ -18,7 +19,8 @@ All colors MUST be HSL.
     --popover: 225 59% 11%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 144 100% 50%; /* #00FF66 */
+    --primary: 144 100% 50%;
+    /* #00FF66 */
     --primary-foreground: 225 59% 11%;
 
     --secondary: 225 40% 20%;
@@ -38,22 +40,22 @@ All colors MUST be HSL.
     --ring: 144 100% 50%;
 
     --radius: 0.75rem;
-    
+
     /* Brand colors */
     --brand-navy: 225 59% 11%;
     --brand-green: 144 100% 50%;
     --brand-green-light: 144 80% 65%;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(144 100% 50%) 0%, hsl(160 70% 55%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(225 59% 11%) 0%, hsl(225 60% 15%) 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px -2px hsl(225 59% 11% / 0.5);
     --shadow-md: 0 8px 24px -8px hsl(225 59% 11% / 0.5);
     --shadow-lg: 0 16px 48px -16px hsl(225 59% 11% / 0.5);
     --shadow-glow: 0 0 20px hsl(144 100% 50% / 0.4);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -96,7 +98,7 @@ All colors MUST be HSL.
     --border: 225 30% 20%;
     --input: 225 30% 20%;
     --ring: 144 100% 50%;
-    
+
     --sidebar-background: 225 59% 11%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 144 100% 50%;
@@ -120,6 +122,8 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 50% 0%, hsl(225 59% 15%), hsl(225 59% 11%));
+    background-attachment: fixed;
   }
 }
 
@@ -128,13 +132,14 @@ All colors MUST be HSL.
   .contain-layout {
     contain: layout;
   }
-  
+
   .will-change-transform {
     will-change: transform;
   }
-  
+
   /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
+
     .animate-fade-in,
     .animate-fade-in-up,
     .animate-slide-in-left,

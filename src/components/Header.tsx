@@ -37,6 +37,7 @@ const Header = () => {
     { href: "#portfolio", label: t("nav.cases") },
     { href: "#clientes", label: t("nav.clients") },
     { href: "#metodologia", label: t("nav.methodology") },
+    { href: "#precos", label: "Planos" },
     { href: "#contato", label: t("nav.contact") },
   ];
 
@@ -52,9 +53,10 @@ const Header = () => {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-white/5" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-[#0B132B]/90 backdrop-blur-md border-b border-white/10 shadow-lg"
+          : "bg-transparent"
+        }`}
     >
       <div className="container px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
@@ -62,7 +64,7 @@ const Header = () => {
             <img
               src={logoInovasys}
               alt="INOVASYS"
-              className="h-8 w-auto cursor-pointer hover:opacity-80 transition-all duration-300"
+              className="h-8 w-auto cursor-pointer hover:opacity-80 transition-all duration-300 brightness-0 invert"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
           </div>
@@ -73,7 +75,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/70 hover:text-primary transition-colors tracking-wide"
+                className="text-sm font-medium text-white/80 hover:text-[#00FFFF] transition-colors tracking-wide"
               >
                 {link.label}
               </a>
@@ -85,7 +87,7 @@ const Header = () => {
             <LanguageSwitcher />
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold px-6 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,102,0.4)]"
+              className="bg-[#00FFFF] text-[#0B132B] hover:bg-[#00FFFF]/90 font-bold px-6 rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)]"
               size="sm"
             >
               <MessageCircle className="h-4 w-4 mr-2" />
@@ -108,7 +110,7 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-background border-l border-white/10 w-[300px] p-0"
+                className="bg-[#0B132B] border-l border-white/10 w-[300px] p-0"
               >
                 <div className="flex flex-col h-full">
                   {/* Header */}
@@ -116,7 +118,7 @@ const Header = () => {
                     <img
                       src={logoInovasys}
                       alt="INOVASYS"
-                      className="h-6 w-auto"
+                      className="h-6 w-auto brightness-0 invert"
                     />
                   </div>
 
@@ -127,12 +129,12 @@ const Header = () => {
                         key={link.href}
                         href={link.href}
                         onClick={handleNavClick}
-                        className="flex items-center px-4 py-3 text-white/70 hover:text-primary hover:bg-white/5 rounded-lg transition-all font-medium"
+                        className="flex items-center px-4 py-3 text-white/80 hover:text-[#00FFFF] hover:bg-white/5 rounded-lg transition-all font-medium"
                       >
                         {link.label}
                       </a>
                     ))}
-                    
+
                     <div className="pt-4 border-t border-white/10 mt-4">
                       <LanguageSwitcher variant="mobile" />
                     </div>
@@ -145,7 +147,7 @@ const Header = () => {
                         handleWhatsAppClick();
                         handleNavClick();
                       }}
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold py-6 rounded-full"
+                      className="w-full bg-[#00FFFF] text-[#0B132B] hover:bg-[#00FFFF]/90 font-bold py-6 rounded-full"
                     >
                       <MessageCircle className="h-5 w-5 mr-2" />
                       {t("nav.whatsapp")}
